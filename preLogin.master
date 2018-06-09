@@ -1,0 +1,64 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="preLogin.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+    <html xmlns="http://www.w3.org/1999/xhtml">
+
+    <head runat="server">
+        <title></title>
+        <link href="css/bootstrap.css" rel="stylesheet" />
+        <link href="css/StyleSheet.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous" />
+        <script src="Scripts/jquery-3.3.1.js"></script>
+        <script src="js/bootstrap.js"></script>
+
+        
+    </head>
+
+    <body>
+        <form runat="server">
+        <div class="main">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" onclick="lk_Home_Click">
+                    <asp:ImageButton ID="img_companyLogo" runat="server" OnClick="lk_Home_Click" src="/images/logo2.png" class="img-responsive brand-img" aria-selected="undefined" />
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+
+                        <li class="nav-item navbar-buttons">
+                            <asp:LinkButton ID="lk_AboutUs" class="nav-link" runat="server" OnClick="lk_AboutUs_Click">About Us</asp:LinkButton>
+                        </li>
+
+                        <li class="nav-item navbar-buttons">
+                            <asp:LinkButton ID="lk_HIW" class="nav-link" runat="server" OnClick="lk_HIW_Click">How It Works</asp:LinkButton>
+                        </li>
+
+                        <li class="nav-item navbar-buttons">
+                            <asp:LinkButton ID="lk_SignUp" class="nav-link" runat="server" OnClick="lk_SignUp_Click">Sign Up</asp:LinkButton>
+                        </li>
+
+                        <li class="nav-item navbar-buttons">
+                            <asp:LinkButton ID="lk_Login" class="nav-link" runat="server" OnClick="lk_Login_Click">Login<i class="fas fa-user" style="padding-left: 5px; padding-right: 5px"></i></asp:LinkButton>
+                        </li>
+
+                    </ul>
+                </div>
+            </nav>
+
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <script src="Scripts/jquery-3.3.1.js"></script>
+        <script src="js/bootstrap.js"></script>
+
+        </form>
+
+        <asp:ContentPlaceHolder ID="head" runat="server">
+        </asp:ContentPlaceHolder>
+    </body>
+
+    </html>
+
