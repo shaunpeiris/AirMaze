@@ -9,11 +9,14 @@ public partial class RequestList : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        
+        searchResults.InnerHtml = " <div> "+
+            " < div style = \"background-color: white; padding: 15px;  border-radius:4px;\" > " +
+ 
+                // "< h1 > Requests based on &#34;<span style=\"font-style: italic\"><asp:Label ID=\"lbl_Location\" runat=\"server\" Text=\"Location123\"></asp:Label>&#34;</span> " +
+                //    " </ h1 > " +
 
-        for (int i = 0; i < 10; i++)
-        {
-            
-        }
+                //"</ div >" +
+
+            "</ div > ";
     }
 }
