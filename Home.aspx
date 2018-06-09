@@ -25,7 +25,5 @@
             <span class="sr-only">Next</span>
         </a>
     </div>
-
-    Remove this line, testing commit
 </asp:Content>
 
