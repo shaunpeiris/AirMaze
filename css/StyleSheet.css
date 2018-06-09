@@ -21,6 +21,16 @@ body{margin-top:20px;
 background:#f1f2f7;
 }
 
+.productDesc {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.productWordFormat{
+    font-size: 11px;
+    text-align:center;
+}
+
 /*panel*/
 .panel {
     border: none;
@@ -33,6 +43,11 @@ background:#f1f2f7;
     font-weight: 300;
 }
 
+.panel-body {
+    background-color: white;
+    border-radius: 3px;
+}
+
 .panel-title {
     color: #2A3542;
     font-size: 14px;
@@ -42,8 +57,22 @@ background:#f1f2f7;
     font-family: 'Open Sans', sans-serif;
 }
 
+.padding5 {
+    padding: 5px;
+}
 
 /*product list*/
+
+.pagination {
+    display: inline-block;
+    padding-left: 0;
+    margin: 20px 0;
+    border-radius: 4px;
+}
+
+.pull-right {
+    float: right!important;
+}
 
 .prod-cat li a{
     border-bottom: 1px dashed #d9d9d9;
@@ -98,9 +127,13 @@ background:#f1f2f7;
     display: inline-block;
     text-align: center;
     border: 3px solid #fff;
-    left: 45%;
+    left: 41.5%;
     bottom: -25px;
     position: absolute;
+}
+
+.cartLogo {
+    padding-top:2px; padding-right:3px;
 }
 
 .adtocart i{

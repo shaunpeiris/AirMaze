@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="preLogin.master.cs" Inherits="MasterPage" %>
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="preLogin.master.cs" Inherits="MasterPage" %>
 
 <!DOCTYPE html>
 
