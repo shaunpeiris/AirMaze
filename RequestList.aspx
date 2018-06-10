@@ -11,10 +11,11 @@
         <link href="css/StyleSheet.css" rel="stylesheet" />
     </header>
 
-    <div id="searchResults" runat="server" class="container-fluid" style="padding-top:20px">      
-
+    <div id="searchResults" runat="server" class="container-fluid" style="padding-top:20px">
+       
 
     </div>
 
 </asp:Content>
+
 
