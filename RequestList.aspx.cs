@@ -12,7 +12,7 @@ public partial class RequestList : System.Web.UI.Page
     string searchLocation = "";
     string reqList = "";
     string requests = "";
-    string user = "username";
+    string user = "user123";
     double price = 100;
 
     protected void Page_Load(object sender, EventArgs e)
