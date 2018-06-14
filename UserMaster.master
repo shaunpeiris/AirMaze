@@ -29,7 +29,7 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-                    <asp:TextBox ID="tb_navbarSearch" runat="server" class="form-control mr-sm-2 col-md-4 ml-auto search-query" style="font-family:Roboto" type="search" placeholder="Search" aria-label="Search"></asp:TextBox>
+                    <asp:TextBox ID="tb_navbarSearch" runat="server" class="form-control mr-sm-2 col-md-4 ml-auto search-query" style="font-family:Roboto" type="search" placeholder="Search" aria-label="Search" OnTextChanged="tb_navbarSearch_TextChanged"></asp:TextBox>
                     <asp:Button ID="btn_navbarSearch" runat="server" class="btn btn-dark my-2 my-sm-0" style="font-family:Roboto" Text="Search" type="submit" OnClick="btn_navbarSearch_Click"></asp:Button>
                     
                     <ul class="navbar-nav ml-auto">
