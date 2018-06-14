@@ -54,7 +54,7 @@
                                 </tr>
                                 <tr>
                                     <td style="padding: 10px; font-weight: bold; font-size:15px;">
-                                        <asp:Button ID="btn_Buy" runat="server" PostBackUrl='<%# "~/ProductPage.aspx?ProductID=" + Eval("requestID") %>' Text='Buy' />
+                                        <asp:Button ID="btn_Buy" runat="server" class="btn-info" style="border-radius: 2px; background-color: #4CAF50; /* Green */border: none; color: white;padding: 10px 15px; text-align: center;  display: inline-block; font-size: 16px; cursor: pointer;" PostBackUrl='<%# "~/ProductPage.aspx?ProductID=" + Eval("requestID") %>' Text='Buy' />
                                     </td>
                                 </tr>
                             </table>

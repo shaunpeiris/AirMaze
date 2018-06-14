@@ -9,8 +9,8 @@ public partial class ProductPage : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        //string url = HttpContext.Current.Request.Url.AbsoluteUri;
-        //int index = url.IndexOf("=");
-        //productpage.InnerHtml = index.ToString();
+        string url = HttpContext.Current.Request.Url.AbsoluteUri;
+        int index = url.IndexOf("=");
+        int productID = int.Parse(url.Substring(50));
     }
 }
