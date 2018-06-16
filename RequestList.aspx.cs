@@ -27,10 +27,11 @@ public partial class RequestList : System.Web.UI.Page
         if (Session["searchTerms"]!=null)
         {
             sqlCommand = "SELECT * FROM [Request] INNER JOIN [ProductPhoto] on [Request].requestID = [ProductPhoto].requestID WHERE productName LIKE '%" + Session["searchTerms"].ToString() + "%'";
-           
+            lbl_Location.Text = Session["searchTerms"].ToString();
         } else
         {
             sqlCommand = "SELECT * FROM [Request] INNER JOIN [ProductPhoto] on [Request].requestID = [ProductPhoto].requestID";
+            searchTerms_display.InnerHtml = "";
         }
         SqlDataSource1.SelectCommand = sqlCommand;
         Session.Clear();

@@ -19,12 +19,19 @@
 
     <div id="searchResults" runat="server" class="container-fluid" style="padding-top:20px">
 
+        <div id="searchTerms_display" runat="server">
+            <div style="background-color: white; padding: 15px;  border-radius:4px;">
+                <h1>Requests based on &#34;<span style="font-style: italic"><asp:Label ID="lbl_Location" runat="server" Text=""></asp:Label>&#34;</span>
+                    </h1>
+            </div>
+        </div>
+
         <table align="center">
             <tr>
                 <td>
                     <asp:DataList ID="DataList1" runat="server" DataSourceID="SqlDataSource1" RepeatColumns="6" CellPadding="10">
                         <ItemTemplate>
-                            <table class="auto-style1" style ="background-color: #e8e8e8; border-radius: 5px; box-shadow: 3px 3px 10px grey;">
+                            <table class="auto-style1 table" style ="font-family:Roboto; background-color: #e8e8e8; border-radius: 5px; box-shadow: 3px 3px 10px grey;">
                                 <tr>
                                     <td style="padding: 10px;">
                                         <asp:Image ID="lbl_ProductImage" runat="server" Height="220px" ImageAlign="Middle" Width="220px" ImageUrl='<%# "\\images\\" + Eval("URL") + ".jpg" %>'/>
@@ -46,7 +53,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td style="padding: 10px; font-weight: bold; font-size:15px;">
+                                    <td style="font-weight: bold; font-size:15px;">
                                         <asp:Label ID="lbl_pRStart" runat="server" Text='<%# "$" + Eval("priceRangeStart") %>'></asp:Label>
                                         &nbsp;-
                                         <asp:Label ID="lbl_pREnd" runat="server" Text='<%# "$" + Eval("priceRangeEnd") %>' ></asp:Label>

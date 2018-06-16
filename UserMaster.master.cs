@@ -40,9 +40,13 @@ public partial class UserMaster : System.Web.UI.MasterPage
     protected void tb_navbarSearch_TextChanged(object sender, EventArgs e)
     {
         string searchterms = tb_navbarSearch.Text;
-        Session["searchTerms"] = searchterms;
+
+        if (searchterms!=null)
+        {
+            Session["searchTerms"] = searchterms;
+        }
+        
 
         Response.Redirect("RequestList.aspx");
-        Session.Clear();
     }
 }
