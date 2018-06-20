@@ -69,7 +69,7 @@
                             <br />
                         </ItemTemplate>
                     </asp:DataList>
-                    <asp:SqlDataSource ID='SqlDataSource1' runat='server' ConnectionString='<%$ ConnectionStrings:airmazin %>' SelectCommand='SELECT * FROM [Request] INNER JOIN [ProductPhoto] on [Request].requestID = [ProductPhoto].requestID'></asp:SqlDataSource>
+                    <asp:SqlDataSource ID='SqlDataSource1' runat='server' ConnectionString='<%$ ConnectionStrings:airmazin %>' SelectCommand="SELECT * FROM [Request] INNER JOIN [ProductPhoto] WHERE [ProductPhoto] LIKE '%_1' on [Request].requestID = [ProductPhoto].requestID"></asp:SqlDataSource>
                 </td>
             </tr>
         </table>

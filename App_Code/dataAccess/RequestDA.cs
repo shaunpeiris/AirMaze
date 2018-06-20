@@ -52,13 +52,13 @@ public static class RequestDA
         return all;
     }
 
-    public static Request getRequestByProductID(int productid)
+    public static Request getRequestByID(int reqid)
     {
         string queryStr = "SELECT * FROM [Request] INNER JOIN [ProductPhoto] on [Request].requestID = [ProductPhoto].requestID WHERE [Request].requestID = @productid";
 
         SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["airmazin"].ConnectionString);
         SqlCommand cmd = new SqlCommand(queryStr, conn);
-        cmd.Parameters.AddWithValue("@productid", productid);
+        cmd.Parameters.AddWithValue("@productid", reqid);
         conn.Open();
         SqlDataReader dr = cmd.ExecuteReader();
 
@@ -111,6 +111,11 @@ public static class RequestDA
         {
             username = dr["username"].ToString();
         }
+
+        conn.Close();
+        dr.Close();
+        dr.Dispose();
+
         return username;
     }
 
@@ -136,11 +141,34 @@ public static class RequestDA
             location = "Singapore";
         }
 
+        conn.Close();
+        dr.Close();
+        dr.Dispose();
+
         return location;
     }
 
     public static List<string> getRequestPhotosURL(int rID)
     {
-        return null; 
+        string queryStr = "SELECT * FROM [ProductPhoto] WHERE requestID = @rid";
+
+        SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["airmazin"].ConnectionString);
+        SqlCommand cmd = new SqlCommand(queryStr, conn);
+        cmd.Parameters.AddWithValue("@rid", rID);
+        conn.Open();
+        SqlDataReader dr = cmd.ExecuteReader();
+
+        List<string> urls = new List<string>();
+
+        while (dr.Read())
+        {
+            urls.Add(dr["URL"].ToString());
+        }
+
+        conn.Close();
+        dr.Close();
+        dr.Dispose();
+
+        return urls; 
     }
 }

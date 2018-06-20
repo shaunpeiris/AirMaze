@@ -7,7 +7,7 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
         <div class="container" style="padding: 50px; font-family: Roboto;">
-
+            <div id="testing" runat="server"></div>
                 <div class="background-color: white; container-fluid">
                     <div class="wrapper">
                         <div class="preview col-md-6">
@@ -38,42 +38,32 @@
                                     <img src="http://placekitten.com/200/126" /></a></li>
                             </ul>--%>
 
-                            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                                
-                                <%--<div class="carousel-inner">
-                                    <div class="carousel-item">
-                                        <img class="d-block w-100" src="images/cat2.jpg" alt="First slide">
-                                    </div>
-                                    <div class="carousel-item active">
-                                        <img class="d-block w-100" src="images/cat3.jpg" alt="Second slide">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img class="d-block w-100" src="images/cat2.jpg" alt="Third slide">
-                                    </div>
-                                </div>--%>
+                            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                                <div class="carousel-inner" id="rp_productImage" runat="server">
+                                   
+                                </div>
 
-                                <asp:LinkButton ID="image_navPrev" runat="server" class="carousel-control-prev" OnClick="image_navPrev_Click">Hello
+                                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
                                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                     <span class="sr-only">Previous</span>
-                                </asp:LinkButton>
-                                
-                                <asp:LinkButton ID="image_navNext" runat="server" class="carousel-control-next">
+                                </a>
+                                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
                                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                     <span class="sr-only">Next</span>
-                                </asp:LinkButton>
+                                </a>
                             </div>
 
 
                         </div>
                         <div class="details col-md-6">
-                            <h3 class="product-title" id="pp_productName" runat="server">men's shoes fashion</h3>
+                            <h3 class="product-title" id="rp_productName" runat="server">men's shoes fashion</h3>
                             <div>
-                                <p style="font-size:14px;"><i class="fas fa-clock"></i><b>&nbsp;Posted on &nbsp;</b><span id="pp_Date" runat="server"></span><b> by </b><span id="pp_Author" style="color:blue;" runat="server"></span><br/>
-                                <i class="fas fa-map-marker-alt"></i><b> &nbsp;Located in &nbsp;</b><span id="pp_Location" runat="server"></span></p>
+                                <p style="font-size:14px;"><i class="fas fa-clock"></i><b>&nbsp;Posted on &nbsp;</b><span id="rp_Date" runat="server"></span><b> by </b><span id="rp_Author" style="color:blue;" runat="server"></span><br/>
+                                <i class="fas fa-map-marker-alt"></i><b> &nbsp;Located in &nbsp;</b><span id="rp_Location" runat="server"></span></p>
                             </div>
-                            <p class="product-description"><b>Description: </b><span id="pp_productDesc" runat="server">Suspendisse quos? Tempus cras iure temporibus? Eu laudantium cubilia sem sem! Repudiandae et! Massa senectus enim minim sociosqu delectus posuere.</span></p>
-                            <p class="product-description"><b>Requestor's remarks: </b><span id="pp_Remarks" style="font-style: italic" runat="server"></span></p>
-                            <h4 class="price">price range: <span id="pp_priceRange" runat="server">$180</span></h4>
+                            <p class="product-description"><b>Description: </b><span id="rp_productDesc" runat="server">Suspendisse quos? Tempus cras iure temporibus? Eu laudantium cubilia sem sem! Repudiandae et! Massa senectus enim minim sociosqu delectus posuere.</span></p>
+                            <p class="product-description"><b>Requestor's remarks: </b><span id="rp_Remarks" style="font-style: italic" runat="server"></span></p>
+                            <h4 class="price">price range: <span id="rp_priceRange" runat="server">$180</span></h4>
 
                             <div class="action">
                                 <button class="add-to-cart btn btn-default" type="button">make an offer</button>
